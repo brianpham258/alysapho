@@ -1,22 +1,27 @@
 import React from 'react';
-import { Row, Col } from 'antd';
 
 const OrderContent = () => {
     return (
         <>
-            <div className="is-page-title" id="order">ORDER</div>
-            <Row className="has-text-center">
-                <Col>
-                    <a href="https://www.skipthedishes.com/">
+            <div className="is-page-title" id="order">
+                ORDER
+            </div>
+            <div className="columns has-text-center">
+                <div className="column">
+                    <a href="https://www.skipthedishes.com/" target="_blank" rel="noreferrer">
                         <img src="/skip.jpeg" alt="Skip The Dishes" style={{ width: '30%' }} />
                     </a>
-                </Col>
-                <Col>
-                    <a href="https://www.ubereats.com/">
+                </div>
+                <div className="column">
+                    <a
+                        href="https://www.ubereats.com/ca/victoria/food-delivery/alysas-pho-and-banh-mi-restaurant/sFJ15DjeRD2Cpen_0Q2c0g"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
                         <img src="/uber_eats.jpg" alt="Uber Eats" style={{ width: '30%' }} />
                     </a>
-                </Col>
-            </Row>
+                </div>
+            </div>
         </>
     );
 };

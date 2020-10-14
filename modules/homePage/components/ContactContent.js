@@ -1,5 +1,4 @@
 import React from 'react';
-import { Row, Col } from 'antd';
 import GoogleMapReact from 'google-map-react';
 
 const AnyReactComponent = ({ text }) => (
@@ -34,8 +33,8 @@ const ContactContent = () => {
             <div className="is-page-title" id="contact">
                 CONTACT
             </div>
-            <Row gutter={8}>
-                <Col className="has-text-center" xs={24} md={12}>
+            <div className="columns">
+                <div className="column has-text-center">
                     <div className="is-description">Hours:</div>
                     <div>Mondey: Closed</div>
                     <div>Tuesday - Sunday: 11:00am to 7:00pm</div>
@@ -43,15 +42,15 @@ const ContactContent = () => {
                     <div>Unit - A 2630 Quadra Street</div>
                     <div>Victoria, BC V8T 4E4</div>
                     <div className="is-description">Tel: 250-590-2829</div>
-                </Col>
-                {/* <Col xs={24} md={12}>
+                </div>
+                {/* <div className="column">
                     <div style={{ height: 400, width: 400 }}>
                         <GoogleMapReact defaultCenter={defaultProps.center} defaultZoom={defaultProps.zoom}>
                             <AnyReactComponent lat={48.43827} lng={-123.35923} text="Alysa's Pho & Banh Mi" />
                         </GoogleMapReact>
                     </div>
-                </Col> */}
-            </Row>
+                </div> */}
+            </div>
         </>
     );
 };

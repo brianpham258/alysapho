@@ -17,7 +17,12 @@ const HomeContent = () => {
                 style={{ position: 'absolute', maxWidth: '100%', minHeight: 500 }}
             />
             <div style={{ textAlign: 'center' }}>
-                <img className="has-relative-position" src="/logo-1024x517.png" alt="Alysa logo" style={{ marginTop: 150, width: '40%' }} />
+                <img
+                    className="has-relative-position"
+                    src="/logo-1024x517.png"
+                    alt="Alysa logo"
+                    style={{ marginTop: 150, width: '40%' }}
+                />
             </div>
 
             <NavbarContent />
