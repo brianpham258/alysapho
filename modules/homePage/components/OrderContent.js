@@ -13,12 +13,8 @@ const OrderContent = () => {
                     </a>
                 </div>
                 <div className="column">
-                    <a
-                        href="https://www.ubereats.com/ca/victoria/food-delivery/alysas-pho-and-banh-mi-restaurant/sFJ15DjeRD2Cpen_0Q2c0g"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        <img src="/uber_eats.jpg" alt="Uber Eats" style={{ width: '30%' }} />
+                    <a href="https://fantuan.ca/en/" target="_blank" rel="noreferrer">
+                        <img src="/fantuan.png" alt="Uber Eats" style={{ width: '30%' }} />
                     </a>
                 </div>
             </div>
