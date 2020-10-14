@@ -13,7 +13,7 @@ const OrderContent = () => {
                     </a>
                 </div>
                 <div className="column">
-                    <a href="https://fantuan.ca/en/" target="_blank" rel="noreferrer">
+                    <a href="https://fantuan.ca/delivery/en/" target="_blank" rel="noreferrer">
                         <img src="/fantuan.png" alt="Uber Eats" style={{ width: '30%' }} />
                     </a>
                 </div>
