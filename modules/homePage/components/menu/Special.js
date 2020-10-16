@@ -26,7 +26,7 @@ const Noodle = () => {
                 </StyledTitleMenu>
                 <StyledTitleMenu className="has-margin-bottom">
                     <div>502. Chicken, Noodle in Soup (Phở Gà)</div>
-                    <div>$12.95</div>
+                    <div>Special &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $12.95</div>
                 </StyledTitleMenu>
                 <StyledTitleMenu className="has-margin-bottom">
                     <div>503. Seafood Noodle in Soup</div>
