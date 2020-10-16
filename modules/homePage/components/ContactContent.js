@@ -36,7 +36,7 @@ const ContactContent = () => {
             <div className="columns">
                 <div className="column has-text-center">
                     <div className="is-description">Hours:</div>
-                    <div>Mondey: Closed</div>
+                    <div>Monday: Closed</div>
                     <div>Tuesday - Sunday: 11:00am to 7:00pm</div>
                     <div className="is-description">Address:</div>
                     <div>Unit - A 2630 Quadra Street</div>
