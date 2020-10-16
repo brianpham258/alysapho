@@ -28,7 +28,7 @@ const Baguette = () => {
                 <div className="has-margin-bottom">104. Grilled Chicken (Gà Nướng)</div>
                 <div className="has-margin-bottom">105. Grilled Pork (Heo Nướng)</div>
                 <div className="has-margin-bottom">106. Grilled Beef (Bò Nướng)</div>
-                <div className="has-margin-bottom">107. Shredded Chicked (Gà Chà Bông)</div>
+                <div className="has-margin-bottom">107. Shredded Chicken (Gà Chà Bông)</div>
                 <div className="has-margin-bottom">108. Curry Tofu Puffs (Cari Chay)</div>
                 <div className="has-margin-bottom">109. Soya Tofu Puffs (Xì Dầu Chay)</div>
                 <div className="has-margin-bottom">110. Five-Spice Pork (Ngũ Vị Hương)</div>
