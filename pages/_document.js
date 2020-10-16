@@ -21,6 +21,7 @@ export default class MyDocument extends Document {
                         name="viewport"
                         content="width=device-width, initial-scale=1, maximum-scale=1.0, minimum-scale=1, user-scalable=no, shrink-to-fit=no"
                     />
+                    <meta name="google-site-verification" content="dgdSc6VoguF_qCZI0fQsXom1v4yLFO48DYGCewW-OEY" />
                     <link rel="shortcut icon" href="/151logo.png" />
                     {this.props.styleTags}
                 </Head>
