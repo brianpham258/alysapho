@@ -65,7 +65,7 @@ const Beverage = () => {
                     <div>$5.75</div>
                 </StyledTitleMenu>
                 <StyledTitleMenu className="has-margin-bottom">
-                    <div>612. Green Bean and Coco Milk</div>
+                    <div>612. Green Bean and Coco Milk (Đậu Xanh Cốt Dừa)</div>
                     <div>$5.75</div>
                 </StyledTitleMenu>
                 <StyledTitleMenu className="has-margin-bottom">
@@ -75,7 +75,7 @@ const Beverage = () => {
                     <div>$5.75</div>
                 </StyledTitleMenu>
                 <StyledTitleMenu className="has-margin-bottom">
-                    <div>614. Water chestnut pearl, jelly, mung bean w/coco milk (Sương sa hạt lựu cốt dừa)</div>
+                    <div>614. Water Chestnut Pearl, Jelly, Mung Bean w/Coco Milk (Sương sa hạt lựu cốt dừa)</div>
                     <div>$5.75</div>
                 </StyledTitleMenu>
             </StyledWrapper>
