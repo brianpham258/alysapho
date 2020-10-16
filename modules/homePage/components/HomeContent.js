@@ -14,7 +14,7 @@ const HomeContent = () => {
                 id="home-image"
                 src="/home-page-image.jpg"
                 alt="Home Page"
-                style={{ position: 'absolute', maxWidth: '100%', minHeight: 500 }}
+                style={{ position: 'absolute', maxWidth: '100%', minHeight: 500, backgroundSize: 'cover' }}
             />
             <div style={{ textAlign: 'center' }}>
                 <img
