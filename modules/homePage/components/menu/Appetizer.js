@@ -29,7 +29,7 @@ const Appetizer = () => {
                 <div className="has-margin-bottom">202. Grilled Pork Sausage (Nem Cuốn)</div>
                 <div className="has-margin-bottom">203. Fish Sausage (Cá Cuốn)</div>
                 <div className="has-margin-bottom">204. Grilled Lemongrass Beef (Bò Cuốn)</div>
-                <div className="has-margin-bottom">205. Grilled Lemongrass Prok (Heo Cuốn)</div>
+                <div className="has-margin-bottom">205. Grilled Lemongrass Pork (Heo Cuốn)</div>
                 <div className="has-margin-bottom">206. Grilled Lemongrass Chicken (Gà Cuốn)</div>
                 <div className="has-margin-bottom">207. Deep Fried Spring Roll (Chả Giò)</div>
             </StyledWrapper>

@@ -40,6 +40,15 @@ const Noodle = () => {
                     412. Sliced Rare Beef, Tendon, and Beef balls (Phở Tái, Gân, Bò Viên)
                 </div>
                 <div className="has-margin-bottom">413. Brisket, Tendon, and Beef balls (Phở Chín, Gân, Bò Viên)</div>
+
+                <div className="has-margin-bottom has-text-right">
+                    <div>Add-On</div>
+                    <div>Bean Sprouts and Basil &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $2.00</div>
+                    <div>Broccoli, Carrot, Rutabaga and Cabbage &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $3.00</div>
+                    <div>Meats &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $3.00</div>
+                    <div>Spicy Broth &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $0.75</div>
+                    <div>Extra Broth 32oz &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $4.49</div>
+                </div>
             </StyledWrapper>
         </div>
     );

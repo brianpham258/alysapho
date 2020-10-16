@@ -12,12 +12,13 @@ import Beverages from './menu/Beverage';
 const MenuContent = () => {
     return (
         <div id="menu">
+            <div className="is-page-title">OUR MENU</div>
             <Baguette />
             <div className="divider">
                 <hr />
             </div>
             <Noodle />
-            <div className="same-section-divider">
+            <div className="divider">
                 <hr />
             </div>
             <Special />

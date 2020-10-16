@@ -31,13 +31,13 @@ const HomeContent = () => {
                 <NotiContent />
                 <div className="container">
                     <hr />
-                    <MenuContent />
+                    <OrderContent />
 
                     <div className="divider">
                         <hr />
                     </div>
 
-                    <OrderContent />
+                    <MenuContent />
 
                     <div className="divider">
                         <hr />

@@ -8,7 +8,11 @@ const OrderContent = () => {
             </div>
             <div className="columns has-text-center">
                 <div className="column">
-                    <a href="https://www.skipthedishes.com/" target="_blank" rel="noreferrer">
+                    <a
+                        href="https://www.skipthedishes.com/alysas-pho-and-banh-mi-quadra-street"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
                         <img src="/skip.jpeg" alt="Skip The Dishes" style={{ width: '30%' }} />
                     </a>
                 </div>

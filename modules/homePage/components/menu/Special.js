@@ -37,7 +37,7 @@ const Noodle = () => {
                     <div>Add-On</div>
                     <div>Bean Sprouts and Basil &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $2.00</div>
                     <div>Broccoli, Carrot, Rutabaga and Cabbage &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $3.00</div>
-                    <div>Meats (Beef Balls or Tendon) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $3.00</div>
+                    <div>Meats &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $3.00</div>
                     <div>Spicy Broth &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $0.75</div>
                     <div>Extra Broth 32oz &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $4.49</div>
                 </div>
