@@ -45,7 +45,7 @@ const Beverage = () => {
                     <div>$4.75</div>
                 </StyledTitleMenu>
                 <StyledTitleMenu className="has-margin-bottom">
-                    <div>607. Iced Coffee ư/Milk (Cà Phê Sữa Đá)</div>
+                    <div>607. Iced Coffee w/Milk (Cà Phê Sữa Đá)</div>
                     <div>$4.75</div>
                 </StyledTitleMenu>
                 <StyledTitleMenu className="has-margin-bottom">
