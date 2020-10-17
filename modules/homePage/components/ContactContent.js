@@ -29,11 +29,11 @@ const ContactContent = () => {
     };
 
     return (
-        <>
+        <div style={{ marginBottom: 50 }}>
             <div className="is-page-title" id="contact">
                 CONTACT
             </div>
-            <div className="columns">
+            <div className="columns" style={{ fontSize: 27 }}>
                 <div className="column has-text-center">
                     <div className="is-description">Hours:</div>
                     <div>Monday: Closed</div>
@@ -51,7 +51,7 @@ const ContactContent = () => {
                     </div>
                 </div> */}
             </div>
-        </>
+        </div>
     );
 };
 

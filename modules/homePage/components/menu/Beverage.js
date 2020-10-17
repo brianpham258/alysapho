@@ -21,7 +21,7 @@ const Beverage = () => {
 
             <StyledWrapper>
                 <StyledTitleMenu className="has-margin-bottom">
-                    <div>601. Spring water bottle (Nước Suối Chai)</div>
+                    <div>601. Spring Water Bottle (Nước Suối Chai)</div>
                     <div>$1.00</div>
                 </StyledTitleMenu>
                 <StyledTitleMenu className="has-margin-bottom">
