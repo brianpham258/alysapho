@@ -16,7 +16,7 @@ const Noodle = () => {
     return (
         <div id="special">
             <div className="menu-title-section">
-                <div className="is-menu-title">House Specialty Noodle (Đặc Biệt)</div>
+                <div className="is-menu-title">House Specialty Noodle</div>
             </div>
 
             <StyledWrapper>
@@ -26,7 +26,7 @@ const Noodle = () => {
                 </StyledTitleMenu>
                 <StyledTitleMenu className="has-margin-bottom">
                     <div>502. Chicken, Noodle in Soup (Phở Gà)</div>
-                    <div>Special &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $14.95</div>
+                    <div>$14.95</div>
                 </StyledTitleMenu>
                 <StyledTitleMenu className="has-margin-bottom">
                     <div>503. Seafood Noodle in Soup</div>
