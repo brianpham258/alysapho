@@ -13,14 +13,14 @@ const HomeContent = () => {
             <img
                 id="home-image"
                 src="/home-page-image.jpg"
-                alt="Home Page"
+                alt="alysa pho and banh mi"
                 style={{ position: 'absolute', maxWidth: '100%', minHeight: 500, backgroundSize: 'cover' }}
             />
             <div style={{ textAlign: 'center' }}>
                 <img
                     className="has-relative-position"
                     src="/logo-1024x517.png"
-                    alt="Alysa logo"
+                    alt="alysa pho logo"
                     style={{ marginTop: 150, width: '40%' }}
                 />
             </div>
