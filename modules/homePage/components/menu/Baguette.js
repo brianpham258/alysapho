@@ -37,7 +37,7 @@ const Baguette = () => {
                     <div>Extra</div>
                     <div>Daikon and carrots &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $0.75</div>
                     <div>Meat &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $2.00</div>
-                    <div>Tofu Puff &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $1.00</div>
+                    <div>Tofu Puff &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $2.00</div>
                 </div>
             </StyledWrapper>
         </div>
