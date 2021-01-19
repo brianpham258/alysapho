@@ -21,7 +21,7 @@ const Appetizer = () => {
 
             <StyledTitleMenu className="columns is-desktop has-margin-bottom">
                 <div className="column is-description">Two Salad Rolls Served with Fish or Coconut Sauce</div>
-                <div className="column is-1 is-description">$6.49</div>
+                <div className="column is-1 is-description">$6.95</div>
             </StyledTitleMenu>
 
             <StyledWrapper>
