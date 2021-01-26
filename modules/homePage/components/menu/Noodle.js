@@ -1,11 +1,100 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { Extra } from '../../../core';
+
 const StyledWrapper = styled.div`
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 20px;
 `;
+
+const PRICES = [
+    {
+        title: 'Regular Size',
+        price: '13.49',
+        className: 'column is-one-quarter'
+    },
+    {
+        title: 'Large Size',
+        price: '15.49',
+        className: 'column is-one-quarter'
+    },
+    {
+        title: 'Kids Size',
+        price: '8.95',
+        className: 'column',
+        extra: {
+            title: 'Bean Sprout and Basil',
+            price: '2.00'
+        }
+    }
+];
+
+const NOODLES = [
+    {
+        title: '401. Rare Beef, Brisket, Tendon and Beef balls (Phở Đặc Biệt)'
+    },
+    {
+        title: '402. Sliced Rare Beef (Phở Tái)'
+    },
+    {
+        title: '403. Brisket (Well-done Beef) (Phở Chín)'
+    },
+    {
+        title: '404. Sliced Rare Beef and Brisket (Phở Tái, Chín)'
+    },
+    {
+        title: '405. Sliced Rare Beef, Brisket, and Tendon (Phở Tái, Chín, Gân)'
+    },
+    {
+        title: '406. Sliced Rare Beef, Brisket, and Beef balls (Phở Tái, Chín, Bò Viên)'
+    },
+    {
+        title: '407. Beef balls (Phở Bò Viên)'
+    },
+    {
+        title: '408. Sliced Rare Beef and Beef balls (Phở Tái, Bò Viên)'
+    },
+    {
+        title: '409. Brisket and Beef balls (Phở Chín, Bò Viên)'
+    },
+    {
+        title: '410. Sliced Rare Beef and Tendon (Phở Tái Gân)'
+    },
+    {
+        title: '411. Brisket and Tendon (Phở Chín Gân)'
+    },
+    {
+        title: '412. Sliced Rare Beef, Tendon, and Beef balls (Phở Tái, Gân, Bò Viên)'
+    },
+    {
+        title: '413. Brisket, Tendon, and Beef balls (Phở Chín, Gân, Bò Viên)'
+    }
+];
+
+const EXTRAS = [
+    {
+        title: 'Bean Sprouts and Basil',
+        price: '2.00'
+    },
+    {
+        title: 'Broccoli, Carrot, Rutabaga and Cabbage',
+        price: '3.00'
+    },
+    {
+        title: 'Meats',
+        price: '3.00'
+    },
+    {
+        title: 'Spicy Broth',
+        price: '0.75'
+    },
+    {
+        title: 'Extra Broth 32oz ',
+        price: '4.49'
+    }
+];
 
 const Noodle = () => {
     return (
@@ -16,38 +105,29 @@ const Noodle = () => {
                     Served with Bean Sprouts, Fresh Basil, Limes, and Jalapenos.
                 </p>
                 <div className="columns is-desktop is-description">
-                    <div className="column is-one-quarter">Regular Size: $13.49</div>
-                    <div className="column is-one-quarter">Large Size: $15.49</div>
-                    <div className="column">Kids Size: $8.95 ($2.00 Bean Sprout and Basil)</div>
+                    {PRICES.map(item => {
+                        const { title, price, className, extra } = item;
+                        return extra ? (
+                            <div className={className}>
+                                {title}: ${price} (${extra.price} {extra.title})
+                            </div>
+                        ) : (
+                            <div className={className}>
+                                {title}: ${price}
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
 
             <StyledWrapper>
-                <div className="has-margin-bottom">401. Rare Beef, Brisket, Tendon and Beef balls (Phở Đặc Biệt)</div>
-                <div className="has-margin-bottom">402. Sliced Rare Beef (Phở Tái)</div>
-                <div className="has-margin-bottom">403. Brisket (Well-done Beef) (Phở Chín)</div>
-                <div className="has-margin-bottom">404. Sliced Rare Beef and Brisket (Phở Tái, Chín)</div>
-                <div className="has-margin-bottom">405. Sliced Rare Beef, Brisket, and Tendon (Phở Tái, Chín, Gân)</div>
-                <div className="has-margin-bottom">
-                    406. Sliced Rare Beef, Brisket, and Beef balls (Phở Tái, Chín, Bò Viên)
-                </div>
-                <div className="has-margin-bottom">407. Beef balls (Phở Bò Viên)</div>
-                <div className="has-margin-bottom">408. Sliced Rare Beef and Beef balls (Phở Tái, Bò Viên)</div>
-                <div className="has-margin-bottom">409. Brisket and Beef balls (Phở Chín, Bò Viên)</div>
-                <div className="has-margin-bottom">410. Sliced Rare Beef and Tendon (Phở Tái Gân)</div>
-                <div className="has-margin-bottom">411. Brisket and Tendon (Phở Chín Gân)</div>
-                <div className="has-margin-bottom">
-                    412. Sliced Rare Beef, Tendon, and Beef balls (Phở Tái, Gân, Bò Viên)
-                </div>
-                <div className="has-margin-bottom">413. Brisket, Tendon, and Beef balls (Phở Chín, Gân, Bò Viên)</div>
+                {NOODLES.map(item => (
+                    <div className="has-margin-bottom">{item.title}</div>
+                ))}
 
-                <div className="has-margin-bottom has-text-right">
+                <div className="has-text-right">
                     <div>Add-On</div>
-                    <div>Bean Sprouts and Basil &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $2.00</div>
-                    <div>Broccoli, Carrot, Rutabaga and Cabbage &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $3.00</div>
-                    <div>Meats &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $3.00</div>
-                    <div>Spicy Broth &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $0.75</div>
-                    <div>Extra Broth 32oz &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $4.49</div>
+                    <Extra extras={EXTRAS} />
                 </div>
             </StyledWrapper>
         </div>

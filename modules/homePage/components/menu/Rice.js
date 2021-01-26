@@ -1,11 +1,57 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { Extra } from '../../../core';
+
 const StyledWrapper = styled.div`
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 20px;
 `;
+
+const RICES = [
+    {
+        title: '801. Grilled Lemongrass Pork Chop and Pork Meatloaf (Cơm Sườn, Chả Trứng)'
+    },
+    {
+        title: '802. Grilled Lemongrass Pork Chop and Fried Egg (Cơm Sườn, Trứng Ốp La)'
+    },
+    {
+        title: '803. Grilled Lemongrass Chicken and Pork Meatloaf (Cơm Gà Nướng, Chả Trứng)'
+    },
+    {
+        title: '804. Grilled Lemongrass Chicken and Fried Egg (Cơm Gà Nướng, Trứng Ốp La)'
+    },
+    {
+        title: '805. Grilled Lemongrass Beef and Pork Meatloaf (Cơm Bò Nướng, Chả Trứng)'
+    },
+    {
+        title: '806. Grilled Lemongrass Beef and Fried Egg (Cơm Bò Nướng, Trứng Ốp La)'
+    }
+];
+
+const EXTRAS = [
+    {
+        title: 'Meat',
+        price: '3.00'
+    },
+    {
+        title: 'Sausage',
+        price: '3.00'
+    },
+    {
+        title: 'Fried Egg',
+        price: '2.00'
+    },
+    {
+        title: 'Rice',
+        price: '2.00'
+    },
+    {
+        title: 'Steam Rice (Side order)',
+        price: '3.00'
+    }
+];
 
 const Rice = () => {
     return (
@@ -19,32 +65,13 @@ const Rice = () => {
             </div>
 
             <StyledWrapper>
-                <div className="has-margin-bottom">
-                    801. Grilled Lemongrass Pork Chop and Pork Meatloaf (Cơm Sườn, Chả Trứng)
-                </div>
-                <div className="has-margin-bottom">
-                    802. Grilled Lemongrass Pork Chop and Fried Egg (Cơm Sườn, Trứng Ốp La)
-                </div>
-                <div className="has-margin-bottom">
-                    803. Grilled Lemongrass Chicken and Pork Meatloaf (Cơm Gà Nướng, Chả Trứng)
-                </div>
-                <div className="has-margin-bottom">
-                    804. Grilled Lemongrass Chicken and Fried Egg (Cơm Gà Nướng, Trứng Ốp La)
-                </div>
-                <div className="has-margin-bottom">
-                    805. Grilled Lemongrass Beef and Pork Meatloaf (Cơm Bò Nướng, Chả Trứng)
-                </div>
-                <div className="has-margin-bottom">
-                    806. Grilled Lemongrass Beef and Fried Egg (Cơm Bò Nướng, Trứng Ốp La)
-                </div>
+                {RICES.map(item => (
+                    <div className="has-margin-bottom">{item.title}</div>
+                ))}
 
                 <div className="has-margin-bottom has-text-right">
                     <div>Extra</div>
-                    <div>Meat &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $3.00</div>
-                    <div>Sausage &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $3.00</div>
-                    <div>Fried Egg &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $2.00</div>
-                    <div>Rice &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $2.00</div>
-                    <div>Steam Rice (Side order) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $3.00</div>
+                    <Extra extras={EXTRAS} />
                 </div>
             </StyledWrapper>
         </div>

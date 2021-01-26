@@ -1,11 +1,43 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { Extra } from '../../../core';
+
 const StyledWrapper = styled.div`
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 20px;
 `;
+
+const VERMICELLIES = [
+    {
+        title: '701. Grilled Lemongrass Pork and Spring Roll (Bún Heo Nướng, Chả Giò)'
+    },
+    {
+        title: '702. Grilled Lemongrass Chicken and Spring Roll (Bún Gà Nướng, Chả Giò)'
+    },
+    {
+        title: '703. Grilled Lemongrass Beef and Spring Roll (Bún Bò Nướng, Chả Giò)'
+    },
+    {
+        title: '704. Grilled Pork Sausage and Spring Roll (Bún Nem Nướng, Chả Giò)'
+    }
+];
+
+const EXTRAS = [
+    {
+        title: 'Meat or Sausage',
+        price: '3.00'
+    },
+    {
+        title: 'Vegetable',
+        price: '3.00'
+    },
+    {
+        title: 'Spring Roll',
+        price: '3.50'
+    }
+];
 
 const Vermicelli = () => {
     return (
@@ -21,24 +53,13 @@ const Vermicelli = () => {
             </div>
 
             <StyledWrapper>
-                <div className="has-margin-bottom">
-                    701. Grilled Lemongrass Pork and Spring Roll (Bún Heo Nướng, Chả Giò)
-                </div>
-                <div className="has-margin-bottom">
-                    702. Grilled Lemongrass Chicken and Spring Roll (Bún Gà Nướng, Chả Giò)
-                </div>
-                <div className="has-margin-bottom">
-                    703. Grilled Lemongrass Beef and Spring Roll (Bún Bò Nướng, Chả Giò)
-                </div>
-                <div className="has-margin-bottom">
-                    704. Grilled Pork Sausage and Spring Roll (Bún Nem Nướng, Chả Giò)
-                </div>
+                {VERMICELLIES.map(item => (
+                    <div className="has-margin-bottom">{item.title}</div>
+                ))}
 
                 <div className="has-margin-bottom has-text-right">
                     <div>Extra</div>
-                    <div>Meat or Sausage &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $3.00</div>
-                    <div>Vegetable &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $3.00</div>
-                    <div>Spring Roll &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $3.50</div>
+                    <Extra extras={EXTRAS} />
                 </div>
             </StyledWrapper>
         </div>

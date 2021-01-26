@@ -23,6 +23,8 @@ export default class MyDocument extends Document {
                     />
                     <meta name="google-site-verification" content="dgdSc6VoguF_qCZI0fQsXom1v4yLFO48DYGCewW-OEY" />
                     <link rel="shortcut icon" href="/151logo.png" />
+                    <link rel="preconnect" href="https://fonts.gstatic.com" />
+                    <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet" />
                     {this.props.styleTags}
                 </Head>
                 <body class="has-navbar-fixed-top">

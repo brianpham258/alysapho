@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { Extra } from '../../../core';
+
 const StyledTitleMenu = styled.div`
     display: flex;
     justify-content: space-between;
@@ -12,6 +14,56 @@ const StyledWrapper = styled.div`
     margin-bottom: 20px;
 `;
 
+const VEGETARIANS = [
+    {
+        title: '301. Vegetarian Spring Roll (2 Rolls)',
+        price: '6.49'
+    },
+    {
+        title: '302. Vegetarian Salad Roll w/Tofu Puffs (2 Rolls)',
+        price: '6.49'
+    },
+    {
+        title: '303. Vegetarian Noodle w/Tofu Puffs (Soya Sauce)',
+        price: '13.95'
+    },
+    {
+        title: '304. Vegetarian Noodle w/Tofu Puffs (In Soup)',
+        price: '13.95'
+    },
+    {
+        title: '305. Vegetarian Vermicelli w/Tofu Puffs & Spring Roll',
+        price: '13.95'
+    },
+    {
+        title: '306. Vegetarian Rice w/Tofu Puffs & Mix Vegetables',
+        price: '13.95'
+    },
+    {
+        title: '307. Spicy Vegetarian Noodle Soup w/Tofu Puffs',
+        price: '13.95'
+    },
+    {
+        title: '308. Spicy Vegetarian Rice with BBQ Soya',
+        price: '13.95'
+    }
+];
+
+const EXTRAS = [
+    {
+        title: 'Tofu Puffs',
+        price: '2.00'
+    },
+    {
+        title: 'Spring Roll',
+        price: '3.50'
+    },
+    {
+        title: 'Vegetables',
+        price: '3.00'
+    }
+];
+
 const Vegetarian = () => {
     return (
         <div id="vegetarian">
@@ -20,44 +72,16 @@ const Vegetarian = () => {
             </div>
 
             <StyledWrapper>
-                <StyledTitleMenu className="has-margin-bottom">
-                    <div>301. Vegetarian Spring Roll (2 Rolls)</div>
-                    <div>$6.49</div>
-                </StyledTitleMenu>
-                <StyledTitleMenu className="has-margin-bottom">
-                    <div>302. Vegetarian Salad Roll w/Tofu Puffs (2 Rolls)</div>
-                    <div>$6.49</div>
-                </StyledTitleMenu>
-                <StyledTitleMenu className="has-margin-bottom">
-                    <div>303. Vegetarian Noodle w/Tofu Puffs (Soya Sauce)</div>
-                    <div>$13.95</div>
-                </StyledTitleMenu>
-                <StyledTitleMenu className="has-margin-bottom">
-                    <div>304. Vegetarian Noodle w/Tofu Puffs (In Soup)</div>
-                    <div>$13.95</div>
-                </StyledTitleMenu>
-                <StyledTitleMenu className="has-margin-bottom">
-                    <div>305. Vegetarian Vermicelli w/Tofu Puffs & Spring Roll</div>
-                    <div>$13.95</div>
-                </StyledTitleMenu>
-                <StyledTitleMenu className="has-margin-bottom">
-                    <div>306. Vegetarian Rice w/Tofu Puffs & Mix Vegetables</div>
-                    <div>$13.95</div>
-                </StyledTitleMenu>
-                <StyledTitleMenu className="has-margin-bottom">
-                    <div>307. Spicy Vegetarian Noodle Soup w/Tofu Puffs</div>
-                    <div>$13.95</div>
-                </StyledTitleMenu>
-                <StyledTitleMenu className="has-margin-bottom">
-                    <div>308. Spicy Vegetarian Rice with BBQ Soya</div>
-                    <div>$13.95</div>
-                </StyledTitleMenu>
+                {VEGETARIANS.map(item => (
+                    <StyledTitleMenu className="has-margin-bottom">
+                        <div>{item.title}</div>
+                        <div>${item.price}</div>
+                    </StyledTitleMenu>
+                ))}
 
                 <div className="has-margin-bottom has-text-right">
                     <div>Add-On</div>
-                    <div>Tofu Puffs &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $2.00</div>
-                    <div>Spring Roll &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $3.50</div>
-                    <div>Vegetables &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $3.00</div>
+                    <Extra extras={EXTRAS} />
                 </div>
             </StyledWrapper>
         </div>

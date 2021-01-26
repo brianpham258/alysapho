@@ -12,6 +12,72 @@ const StyledWrapper = styled.div`
     margin-bottom: 20px;
 `;
 
+const BEVERAGES = [
+    {
+        title: '601. Spring Water Bottle (Nước Suối Chai)',
+        price: '1.00'
+    },
+    {
+        title: '602. Soft Drink (Nước Ngọt)',
+        price: '2.00'
+    },
+    {
+        title: '603. Sparking Fruit Juice (Nước Trái Cây)',
+        price: '3.00'
+    },
+    {
+        title: '604. Hot Coffee (Cà Phê Nóng)',
+        price: '4.75'
+    },
+    {
+        title: '605. Iced Coffee (Cà Phê Đá)',
+        price: '4.75'
+    },
+    {
+        title: '606. Hot Coffee w/Milk (Cà Phê Sữa Nóng)',
+        price: '4.75'
+    },
+    {
+        title: '607. Iced Coffee w/Milk (Cà Phê Sữa Đá)',
+        price: '4.75'
+    },
+    {
+        title: '608. Fresh Lemonade (Nước Chanh Tươi)',
+        price: '4.00'
+    },
+    {
+        title: '609. Coconut Juice (Nước Dừa Tươi)',
+        price: '5.75'
+    },
+    {
+        title: '610. Tri-Colour Bean and Coco Milk (Chè Ba Màu)',
+        price: '5.75'
+    },
+    {
+        title: '611. Red Bean and Coco Milk (Đậu Đỏ Cốt Dừa)',
+        price: '5.75'
+    },
+    {
+        title: '612. Green Bean and Coco Milk (Đậu Xanh Cốt Dừa)',
+        price: '5.75'
+    },
+    {
+        title: '613. Lychee or Logan Jelly in Logan Syrup on Ice (Thạch trái vải hoặc trái nhãn, nước nhãn nhục)',
+        price: '5.75'
+    },
+    {
+        title: '614. Water Chestnut Pearl, Jelly, Mung Bean w/Coco Milk (Sương sa hạt lựu cốt dừa)',
+        price: '5.75'
+    }
+];
+
+const BOBA = [
+    {
+        title: '615. Tora Bubble Tea',
+        price: '4.50'
+    }
+];
+
 const Beverage = () => {
     return (
         <div id="beverage">
@@ -20,64 +86,25 @@ const Beverage = () => {
             </div>
 
             <StyledWrapper>
-                <StyledTitleMenu className="has-margin-bottom">
-                    <div>601. Spring Water Bottle (Nước Suối Chai)</div>
-                    <div>$1.00</div>
-                </StyledTitleMenu>
-                <StyledTitleMenu className="has-margin-bottom">
-                    <div>602. Soft Drink (Nước Ngọt)</div>
-                    <div>$2.00</div>
-                </StyledTitleMenu>
-                <StyledTitleMenu className="has-margin-bottom">
-                    <div>603. Sparking Fruit Juice (Nước Trái Cây)</div>
-                    <div>$3.00</div>
-                </StyledTitleMenu>
-                <StyledTitleMenu className="has-margin-bottom">
-                    <div>604. Hot Coffee (Cà Phê Nóng)</div>
-                    <div>$4.75</div>
-                </StyledTitleMenu>
-                <StyledTitleMenu className="has-margin-bottom">
-                    <div>605. Iced Coffee (Cà Phê Đá)</div>
-                    <div>$4.75</div>
-                </StyledTitleMenu>
-                <StyledTitleMenu className="has-margin-bottom">
-                    <div>606. Hot Coffee w/Milk (Cà Phê Sữa Nóng)</div>
-                    <div>$4.75</div>
-                </StyledTitleMenu>
-                <StyledTitleMenu className="has-margin-bottom">
-                    <div>607. Iced Coffee w/Milk (Cà Phê Sữa Đá)</div>
-                    <div>$4.75</div>
-                </StyledTitleMenu>
-                <StyledTitleMenu className="has-margin-bottom">
-                    <div>608. Fresh Lemonade (Nước Chanh Tươi)</div>
-                    <div>$4.00</div>
-                </StyledTitleMenu>
-                <StyledTitleMenu className="has-margin-bottom">
-                    <div>609. Coconut Juice (Nước Dừa Tươi)</div>
-                    <div>$5.75</div>
-                </StyledTitleMenu>
-                <StyledTitleMenu className="has-margin-bottom">
-                    <div>610. Tri-Colour Bean and Coco Milk (Chè Ba Màu)</div>
-                    <div>$5.75</div>
-                </StyledTitleMenu>
-                <StyledTitleMenu className="has-margin-bottom">
-                    <div>611. Red Bean and Coco Milk (Đậu Đỏ Cốt Dừa)</div>
-                    <div>$5.75</div>
-                </StyledTitleMenu>
-                <StyledTitleMenu className="has-margin-bottom">
-                    <div>612. Green Bean and Coco Milk (Đậu Xanh Cốt Dừa)</div>
-                    <div>$5.75</div>
-                </StyledTitleMenu>
-                <StyledTitleMenu className="has-margin-bottom">
-                    <div>
-                        613. Lychee or Logan Jelly in Logan Syrup on Ice (Thạch trái vải hoặc trái nhãn, nước nhãn nhục)
-                    </div>
-                    <div>$5.75</div>
-                </StyledTitleMenu>
-                <StyledTitleMenu className="has-margin-bottom">
-                    <div>614. Water Chestnut Pearl, Jelly, Mung Bean w/Coco Milk (Sương sa hạt lựu cốt dừa)</div>
-                    <div>$5.75</div>
-                </StyledTitleMenu>
+                {BEVERAGES.map(item => (
+                    <StyledTitleMenu className="has-margin-bottom">
+                        <div>{item.title}</div>
+                        <div>${item.price}</div>
+                    </StyledTitleMenu>
+                ))}
+
+                <div className="same-section-divider">
+                    <hr />
+                </div>
+
+                <div id="boba">
+                    {BOBA.map(item => (
+                        <StyledTitleMenu className="has-margin-bottom">
+                            <div>{item.title}</div>
+                            <div>${item.price}</div>
+                        </StyledTitleMenu>
+                    ))}
+                </div>
             </StyledWrapper>
         </div>
     );

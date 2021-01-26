@@ -12,6 +12,45 @@ const StyledWrapper = styled.div`
     margin-bottom: 20px;
 `;
 
+const ROLLS = [
+    {
+        title: '201. Pork & Shrimp (Gỏi Cuốn)'
+    },
+    {
+        title: '202. Grilled Pork Sausage (Nem Cuốn)'
+    },
+    {
+        title: '203. Fish Sausage (Cá Cuốn)'
+    },
+    {
+        title: '204. Grilled Lemongrass Beef (Bò Cuốn)'
+    },
+    {
+        title: '205. Grilled Lemongrass Pork (Heo Cuốn)'
+    },
+    {
+        title: '206. Grilled Lemongrass Chicken (Gà Cuốn)'
+    },
+    {
+        title: '207. Deep Fried Spring Roll (Chả Giò)'
+    }
+];
+
+const SALADS = [
+    {
+        title: '208. Pork & Shrimp'
+    },
+    {
+        title: '209. Grilled Lemongrass Pork'
+    },
+    {
+        title: '210. Grilled Lemongrass Chicken'
+    },
+    {
+        title: '211. Grilled Lemongrass Beef'
+    }
+];
+
 const Appetizer = () => {
     return (
         <div id="appetizer">
@@ -25,13 +64,9 @@ const Appetizer = () => {
             </StyledTitleMenu>
 
             <StyledWrapper>
-                <div className="has-margin-bottom">201. Pork & Shrimp (Gỏi Cuốn)</div>
-                <div className="has-margin-bottom">202. Grilled Pork Sausage (Nem Cuốn)</div>
-                <div className="has-margin-bottom">203. Fish Sausage (Cá Cuốn)</div>
-                <div className="has-margin-bottom">204. Grilled Lemongrass Beef (Bò Cuốn)</div>
-                <div className="has-margin-bottom">205. Grilled Lemongrass Pork (Heo Cuốn)</div>
-                <div className="has-margin-bottom">206. Grilled Lemongrass Chicken (Gà Cuốn)</div>
-                <div className="has-margin-bottom">207. Deep Fried Spring Roll (Chả Giò)</div>
+                {ROLLS.map(item => (
+                    <div className="has-margin-bottom">{item.title}</div>
+                ))}
             </StyledWrapper>
 
             <div className="same-section-divider">
@@ -44,10 +79,9 @@ const Appetizer = () => {
             </StyledTitleMenu>
 
             <StyledWrapper>
-                <div className="has-margin-bottom">208. Pork & Shrimp</div>
-                <div className="has-margin-bottom">209. Grilled Lemongrass Pork</div>
-                <div className="has-margin-bottom">210. Grilled Lemongrass Chicken</div>
-                <div className="has-margin-bottom">211. Grilled Lemongrass Beef</div>
+                {SALADS.map(item => (
+                    <div className="has-margin-bottom">{item.title}</div>
+                ))}
             </StyledWrapper>
         </div>
     );
