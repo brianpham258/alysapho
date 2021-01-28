@@ -66,7 +66,7 @@ const EXTRAS = [
 
 const Vegetarian = () => {
     return (
-        <div id="vegetarian">
+        <div>
             <div className="menu-title-section">
                 <div className="is-menu-title">Vegetarian (Chay)</div>
             </div>

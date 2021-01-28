@@ -53,7 +53,7 @@ const SALADS = [
 
 const Appetizer = () => {
     return (
-        <div id="appetizer">
+        <div>
             <div className="menu-title-section">
                 <div className="is-menu-title">Appetizers (Khai Vị)</div>
             </div>

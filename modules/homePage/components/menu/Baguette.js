@@ -62,7 +62,7 @@ const EXTRAS = [
 
 const Baguette = () => {
     return (
-        <div id="baguette">
+        <div>
             <div className="menu-title-section">
                 <div className="columns is-desktop is-menu-title">
                     <div className="column">Baguette (Bánh Mì)</div>

@@ -22,7 +22,7 @@ const NavbarContent = () => {
 
             <div className={menuVisible ? 'navbar-menu is-active' : 'navbar-menu'}>
                 <div className="navbar-start" style={{ height: '100%' }}>
-                    <a className="navbar-item" href="#home-image">
+                    <a className="navbar-item" href="#home">
                         Home
                     </a>
                     <div className="navbar-item has-dropdown is-hoverable">
@@ -53,6 +53,9 @@ const NavbarContent = () => {
                             </a>
                             <a className="navbar-item" href="#beverage">
                                 Beverages
+                            </a>
+                            <a className="navbar-item" href="#boba">
+                                Boba Tea
                             </a>
                         </div>
                     </div>

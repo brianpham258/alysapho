@@ -54,7 +54,7 @@ const EXTRAS = [
 
 const Noodle = () => {
     return (
-        <div id="special">
+        <div>
             <div className="menu-title-section">
                 <div className="is-menu-title">House Specialty Noodle</div>
             </div>

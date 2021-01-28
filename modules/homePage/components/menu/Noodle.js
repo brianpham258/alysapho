@@ -98,7 +98,7 @@ const EXTRAS = [
 
 const Noodle = () => {
     return (
-        <div id="noodle">
+        <div>
             <div className="menu-title-section">
                 <p className="is-menu-title">Beef Noodle Soup (Phở)</p>
                 <p className="is-description has-margin-bottom">

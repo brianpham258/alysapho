@@ -80,7 +80,7 @@ const BOBA = [
 
 const Beverage = () => {
     return (
-        <div id="beverage">
+        <div>
             <div className="menu-title-section">
                 <div className="is-menu-title">Beverages (Giải Khát)</div>
             </div>
@@ -93,11 +93,11 @@ const Beverage = () => {
                     </StyledTitleMenu>
                 ))}
 
-                <div className="same-section-divider">
+                <div className="same-section-divider" id="boba">
                     <hr />
                 </div>
 
-                <div id="boba">
+                <div>
                     {BOBA.map(item => (
                         <StyledTitleMenu className="has-margin-bottom">
                             <div>{item.title}</div>
