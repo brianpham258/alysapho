@@ -49,6 +49,19 @@ const Appetizer = () => {
                 <div className="has-margin-bottom">210. Grilled Lemongrass Chicken</div>
                 <div className="has-margin-bottom">211. Grilled Lemongrass Beef</div>
             </StyledWrapper>
+
+            <div className="same-section-divider">
+                <hr />
+            </div>
+
+            <StyledTitleMenu className="columns is-desktop has-margin-bottom">
+                <div className="column is-description">Beef Jerky</div>
+                <div className="column is-1 is-description">$7.00</div>
+            </StyledTitleMenu>
+
+            <StyledWrapper>
+                <div className="has-margin-bottom">212. Beef Jerky</div>
+            </StyledWrapper>
         </div>
     );
 };

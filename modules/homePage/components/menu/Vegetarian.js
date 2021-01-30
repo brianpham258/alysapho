@@ -22,11 +22,11 @@ const Vegetarian = () => {
             <StyledWrapper>
                 <StyledTitleMenu className="has-margin-bottom">
                     <div>301. Vegetarian Spring Roll (2 Rolls)</div>
-                    <div>$6.49</div>
+                    <div>$6.95</div>
                 </StyledTitleMenu>
                 <StyledTitleMenu className="has-margin-bottom">
                     <div>302. Vegetarian Salad Roll w/Tofu Puffs (2 Rolls)</div>
-                    <div>$6.49</div>
+                    <div>$6.95</div>
                 </StyledTitleMenu>
                 <StyledTitleMenu className="has-margin-bottom">
                     <div>303. Vegetarian Noodle w/Tofu Puffs (Soya Sauce)</div>
