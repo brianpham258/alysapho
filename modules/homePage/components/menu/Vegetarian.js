@@ -17,11 +17,11 @@ const StyledWrapper = styled.div`
 const VEGETARIANS = [
     {
         title: '301. Vegetarian Spring Roll (2 Rolls)',
-        price: '6.49'
+        price: '6.95'
     },
     {
         title: '302. Vegetarian Salad Roll w/Tofu Puffs (2 Rolls)',
-        price: '6.49'
+        price: '6.95'
     },
     {
         title: '303. Vegetarian Noodle w/Tofu Puffs (Soya Sauce)',

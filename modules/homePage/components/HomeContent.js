@@ -19,7 +19,7 @@ const StyledLogo = styled.div`
     width: 100%;
     z-index: 5;
     text-align: center;
-    padding: 15% 0;
+    padding: 10% 0;
 `;
 
 const HomeContent = () => {
@@ -31,7 +31,7 @@ const HomeContent = () => {
                         className="has-relative-position"
                         src="/logo-1024x517.png"
                         alt="alysa pho logo"
-                        style={{ width: '50%' }}
+                        style={{ width: '40%' }}
                     />
                 </StyledLogo>
             </StyledImage>

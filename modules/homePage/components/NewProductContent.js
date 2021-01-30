@@ -81,7 +81,7 @@ const StyledProductImg = styled.img`
 const StyledButtonWrapper = styled.div`
     width: 100%;
     text-align: center;
-    font-size: 30px;
+    font-size: 60px;
     margin-top: 30px;
 `;
 
