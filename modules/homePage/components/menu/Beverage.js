@@ -73,7 +73,19 @@ const BEVERAGES = [
 
 const BOBA = [
     {
-        title: '615. Tora Bubble Tea',
+        title: '615. Tora Bubble Tea (Trà Sữa Trân Châu Khoai Môn)',
+        price: '4.50'
+    },
+    {
+        title: '616. Mango Bubble Tea (Trà Sữa Trân Châu Xoài)',
+        price: '4.50'
+    },
+    {
+        title: '617. Straberry Bubble Tea (Trà Sữa Trân Châu Dâu)',
+        price: '4.50'
+    },
+    {
+        title: '618. Lychee Bubble Tea (Trà Sữa Trân Châu Vải)',
         price: '4.50'
     }
 ];

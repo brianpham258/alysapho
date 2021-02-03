@@ -25,7 +25,7 @@ const StyledLogo = styled.div`
 const HomeContent = () => {
     return (
         <>
-            <StyledImage id="home">
+            <StyledImage>
                 <StyledLogo>
                     <img
                         className="has-relative-position"
@@ -50,7 +50,7 @@ const HomeContent = () => {
 
                     <OrderContent />
 
-                    <div className="divider">
+                    <div id="menu" className="divider">
                         <hr />
                     </div>
 

@@ -11,7 +11,7 @@ import Beverages from './menu/Beverage';
 
 const MenuContent = () => {
     return (
-        <div id="menu">
+        <div>
             <div className="is-page-title" id="baguette">
                 OUR MENU
             </div>

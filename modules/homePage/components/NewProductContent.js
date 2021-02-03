@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Parallax } from 'rc-scroll-anim';
 
 const StyledWrapper = styled.div`
-    background-color: #ffcc99;
+    background-color: #ffbf80;
     font-family: 'Yellowtail', cursive;
     color: rgb(248, 248, 248);
     padding: 20px 5%;
@@ -42,7 +42,7 @@ const StyledProductImgWrapper = styled.div`
         }
         .p-description {
             @media only screen and (min-width: 700px) {
-                font-size: 2em;
+                font-size: 2.5em;
             }
             font-size: 1em;
         }
@@ -64,7 +64,7 @@ const StyledProductImgWrapper = styled.div`
         }
         .p-description {
             @media only screen and (min-width: 700px) {
-                font-size: 2em;
+                font-size: 2.5em;
             }
             font-size: 1em;
         }
@@ -103,7 +103,7 @@ const CONTENTS = [
             alt: 'taro tea'
         },
         title: 'Taro Bubble Tea',
-        description: 'Made with cooked taro, baking soda, condensed milk, taro jelly, boba pops.'
+        description: 'Taro tea with jelly and boba.'
     },
     {
         className: 'right',
@@ -122,7 +122,7 @@ const CONTENTS = [
             alt: 'strawberry tea'
         },
         title: 'Strawberry Bubble Tea',
-        description: 'Made with frozen strawberry, milk tea, boba tea, strawberry jelly, boba pops.'
+        description: 'Strawberry tea with jelly and boba.'
     },
     {
         className: 'left',
@@ -141,7 +141,7 @@ const CONTENTS = [
             alt: 'mango tea'
         },
         title: 'Mango Bubble Tea',
-        description: 'Made with frozen mango, coconut milk, jasmine tea, mango jelly, boba pops.'
+        description: 'Mango tea with jelly and boba.'
     }
 ];
 
