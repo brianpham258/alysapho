@@ -11,34 +11,36 @@ import Beverages from './menu/Beverage';
 
 const MenuContent = () => {
     return (
-        <div id="menu">
-            <div className="is-page-title">OUR MENU</div>
+        <div>
+            <div className="is-page-title" id="baguette">
+                OUR MENU
+            </div>
             <Baguette />
-            <div className="divider">
+            <div className="divider" id="noodle">
                 <hr />
             </div>
             <Noodle />
-            <div className="divider">
+            <div className="divider" id="special">
                 <hr />
             </div>
             <Special />
-            <div className="divider">
+            <div className="divider" id="appetizer">
                 <hr />
             </div>
             <Appetizer />
-            <div className="divider">
+            <div className="divider" id="vermicelli">
                 <hr />
             </div>
             <Vermicelli />
-            <div className="divider">
+            <div className="divider" id="rice">
                 <hr />
             </div>
             <Rice />
-            <div className="divider">
+            <div className="divider" id="vegetarian">
                 <hr />
             </div>
             <Vegetarian />
-            <div className="divider">
+            <div className="divider" id="beverage">
                 <hr />
             </div>
             <Beverages />

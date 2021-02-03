@@ -9,41 +9,48 @@ import ContactContent from './ContactContent';
 import NewProductContent from './NewProductContent';
 import { Scroll } from '../../core';
 
-const StyledImage = styled.img`
-    position: absolute;
-    max-width: 100%;
-    min-height: 500px;
+const StyledImage = styled.div`
+    width: 100%;
     background-size: cover;
+    background: url('/home-page-image.jpg');
 `;
 
-const StyledLogo = styled.img`
-    margin-top: 150px;
-    width: 40%;
+const StyledLogo = styled.div`
+    width: 100%;
+    z-index: 5;
+    text-align: center;
+    padding: 10% 0;
 `;
 
 const HomeContent = () => {
     return (
         <>
-            <StyledImage id="home-image" src="/home-page-image.jpg" alt="alysa pho and banh mi" />
-            <div style={{ textAlign: 'center' }}>
-                <StyledLogo className="has-relative-position" src="/logo-1024x517.png" alt="alysa pho logo" />
-            </div>
+            <StyledImage>
+                <StyledLogo>
+                    <img
+                        className="has-relative-position"
+                        src="/logo-1024x517.png"
+                        alt="alysa pho logo"
+                        style={{ width: '40%' }}
+                    />
+                </StyledLogo>
+            </StyledImage>
 
             <NavbarContent />
 
-            <div style={{ marginTop: 150 }}>
+            <div className="mt-32">
                 <NotiContent />
                 <div className="container">
                     <hr />
                     <NewProductContent />
 
-                    <div className="divider">
+                    <div id="order" className="divider">
                         <hr />
                     </div>
 
                     <OrderContent />
 
-                    <div className="divider">
+                    <div id="menu" className="divider">
                         <hr />
                     </div>
 

@@ -55,7 +55,7 @@ const EXTRAS = [
 
 const Rice = () => {
     return (
-        <div id="rice">
+        <div>
             <div className="menu-title-section">
                 <div className="columns is-desktop is-menu-title">
                     <div className="column">Rice Plates (Cơm)</div>

@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Parallax } from 'rc-scroll-anim';
 
 const StyledWrapper = styled.div`
-    background-color: #ffcc99;
+    background-color: #ffbf80;
     font-family: 'Yellowtail', cursive;
     color: rgb(248, 248, 248);
     padding: 20px 5%;
@@ -41,7 +42,7 @@ const StyledProductImgWrapper = styled.div`
         }
         .p-description {
             @media only screen and (min-width: 700px) {
-                font-size: 2em;
+                font-size: 2.5em;
             }
             font-size: 1em;
         }
@@ -63,7 +64,7 @@ const StyledProductImgWrapper = styled.div`
         }
         .p-description {
             @media only screen and (min-width: 700px) {
-                font-size: 2em;
+                font-size: 2.5em;
             }
             font-size: 1em;
         }
@@ -80,81 +81,123 @@ const StyledProductImg = styled.img`
 const StyledButtonWrapper = styled.div`
     width: 100%;
     text-align: center;
-    font-size: 30px;
+    font-size: 60px;
     margin-top: 30px;
 `;
 
 const CONTENTS = [
     {
         className: 'left',
+        parallax: {
+            animation: {
+                x: 0,
+                opacity: 1
+            },
+            style: {
+                transform: 'translateX(100px)',
+                opacity: 0
+            }
+        },
         img: {
             src: '/taro-tea.png',
             alt: 'taro tea'
         },
         title: 'Taro Bubble Tea',
-        description: 'Made with cooked taro, baking soda, condensed milk, taro jelly, boba pops.'
+        description: 'Taro tea with jelly and boba.'
     },
     {
         className: 'right',
+        parallax: {
+            animation: {
+                x: 0,
+                opacity: 1
+            },
+            style: {
+                transform: 'translateX(-100px)',
+                opacity: 0
+            }
+        },
         img: {
             src: '/strawberry-tea.png',
             alt: 'strawberry tea'
         },
         title: 'Strawberry Bubble Tea',
-        description: 'Made with frozen strawberry, milk tea, boba tea, strawberry jelly, boba pops.'
+        description: 'Strawberry tea with jelly and boba.'
     },
     {
         className: 'left',
+        parallax: {
+            animation: {
+                x: 0,
+                opacity: 1
+            },
+            style: {
+                transform: 'translateX(100px)',
+                opacity: 0
+            }
+        },
         img: {
             src: '/mango-tea.png',
             alt: 'mango tea'
         },
         title: 'Mango Bubble Tea',
-        description: 'Made with frozen mango, coconut milk, jasmine tea, mango jelly, boba pops.'
+        description: 'Mango tea with jelly and boba.'
     }
 ];
 
 const NewProductContent = () => {
     return (
-        <StyledWrapper>
-            <StyledTitle id="new_product">New product</StyledTitle>
-            <StyledImgWrapper>
-                <StyledImg src="/bubble-tea.png" alt="bubble tea" />
-            </StyledImgWrapper>
-            <StyledTitle>Bubble Tea</StyledTitle>
-            <StyledTitle>Only $4.50</StyledTitle>
+        <Parallax animation={{ y: 0, opacity: 1 }} style={{ transform: 'translateY(100px)', opacity: 0 }}>
+            <StyledWrapper>
+                <Parallax animation={{ y: 0, opacity: 1 }} style={{ transform: 'translateY(100px)', opacity: 0 }}>
+                    <StyledTitle id="new_product">New product</StyledTitle>
+                </Parallax>
 
-            {CONTENTS.map(item => {
-                const { className, img, title, description } = item;
-                return (
-                    <StyledProductImgWrapper>
-                        <div className={className}>
-                            {className === 'left' ? (
-                                <>
-                                    <StyledProductImg className="img" src={img.src} alt={img.alt} />
-                                    <div>
-                                        <div className="p-title">{title}</div>
-                                        <div className="p-description">{description}</div>
-                                    </div>
-                                </>
-                            ) : (
-                                <>
-                                    <div>
-                                        <div className="p-title">{title}</div>
-                                        <div className="p-description">{description}</div>
-                                    </div>
-                                    <StyledProductImg className="img" src={img.src} alt={img.alt} />
-                                </>
-                            )}
-                        </div>
-                    </StyledProductImgWrapper>
-                );
-            })}
+                <Parallax animation={{ y: 0, opacity: 1 }} style={{ transform: 'translateY(100px)', opacity: 0 }}>
+                    <StyledImgWrapper>
+                        <StyledImg src="/bubble-tea.png" alt="bubble tea" />
+                    </StyledImgWrapper>
+                </Parallax>
 
-            <StyledButtonWrapper>
-                <a href="/#boba">Click here to see more options!</a>
-            </StyledButtonWrapper>
-        </StyledWrapper>
+                <Parallax animation={{ y: 0, opacity: 1 }} style={{ transform: 'translateY(100px)', opacity: 0 }}>
+                    <StyledTitle>Bubble Tea</StyledTitle>
+                    <StyledTitle>Only $4.50</StyledTitle>
+                </Parallax>
+
+                {CONTENTS.map(item => {
+                    const { className, parallax, img, title, description } = item;
+                    return (
+                        <Parallax animation={parallax.animation} style={parallax.style}>
+                            <StyledProductImgWrapper>
+                                <div className={className}>
+                                    {className === 'left' ? (
+                                        <>
+                                            <StyledProductImg className="img" src={img.src} alt={img.alt} />
+                                            <div>
+                                                <div className="p-title">{title}</div>
+                                                <div className="p-description">{description}</div>
+                                            </div>
+                                        </>
+                                    ) : (
+                                        <>
+                                            <div>
+                                                <div className="p-title">{title}</div>
+                                                <div className="p-description">{description}</div>
+                                            </div>
+                                            <StyledProductImg className="img" src={img.src} alt={img.alt} />
+                                        </>
+                                    )}
+                                </div>
+                            </StyledProductImgWrapper>
+                        </Parallax>
+                    );
+                })}
+
+                <StyledButtonWrapper>
+                    <a href="/#boba">Click here to see more options!</a>
+                </StyledButtonWrapper>
+            </StyledWrapper>
+        </Parallax>
     );
 };
 

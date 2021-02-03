@@ -51,9 +51,15 @@ const SALADS = [
     }
 ];
 
+const BEEF = [
+    {
+        title: '212. Beef Jerky'
+    }
+];
+
 const Appetizer = () => {
     return (
-        <div id="appetizer">
+        <div>
             <div className="menu-title-section">
                 <div className="is-menu-title">Appetizers (Khai Vị)</div>
             </div>
@@ -94,7 +100,9 @@ const Appetizer = () => {
             </StyledTitleMenu>
 
             <StyledWrapper>
-                <div className="has-margin-bottom">212. Beef Jerky</div>
+                {BEEF.map(item => (
+                    <div className="has-margin-bottom">{item.title}</div>
+                ))}
             </StyledWrapper>
         </div>
     );

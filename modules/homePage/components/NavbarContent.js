@@ -1,4 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import styled from 'styled-components';
+
+const StyledNav = styled.nav`
+    z-index: 5;
+    transition: top 0.5s;
+`;
+
+let previousScrollPos = typeof window !== 'undefined' ? window.pageYOffset : null;
 
 const NavbarContent = () => {
     const [menuVisible, setMenuVisible] = useState(false);
@@ -7,8 +15,26 @@ const NavbarContent = () => {
         setMenuVisible(!menuVisible);
     };
 
+    const handleScroll = () => {
+        const currentScrollPos = window.pageYOffset;
+
+        if (previousScrollPos > currentScrollPos) {
+            document.getElementById('top-nav').style.top = '0';
+        } else {
+            document.getElementById('top-nav').style.top = '-60px';
+        }
+        previousScrollPos = currentScrollPos;
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
-        <nav className="navbar is-fixed-top" role="navigation" arial-label="main navigation">
+        <StyledNav id="top-nav" className="navbar is-fixed-top" role="navigation" arial-label="main navigation">
             <div className="navbar-brand">
                 <a className="navbar-item" href="#">
                     <img src="/logocolored254.png" alt="Alysa's Pho & Banh Mi" width="70" height="30" />
@@ -22,7 +48,7 @@ const NavbarContent = () => {
 
             <div className={menuVisible ? 'navbar-menu is-active' : 'navbar-menu'}>
                 <div className="navbar-start" style={{ height: '100%' }}>
-                    <a className="navbar-item" href="#home-image">
+                    <a className="navbar-item" href="#">
                         Home
                     </a>
                     <div className="navbar-item has-dropdown is-hoverable">
@@ -54,6 +80,9 @@ const NavbarContent = () => {
                             <a className="navbar-item" href="#beverage">
                                 Beverages
                             </a>
+                            <a className="navbar-item" href="#boba">
+                                Boba Tea
+                            </a>
                         </div>
                     </div>
                     <a className="navbar-item" href="#order">
@@ -64,7 +93,7 @@ const NavbarContent = () => {
                     </a>
                 </div>
             </div>
-        </nav>
+        </StyledNav>
     );
 };
 

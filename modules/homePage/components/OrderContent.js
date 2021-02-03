@@ -3,9 +3,7 @@ import React from 'react';
 const OrderContent = () => {
     return (
         <>
-            <div className="is-page-title" id="order">
-                ORDER
-            </div>
+            <div className="is-page-title">ORDER</div>
             <div className="columns has-text-center">
                 <div className="column">
                     <a

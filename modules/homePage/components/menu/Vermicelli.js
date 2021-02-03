@@ -41,7 +41,7 @@ const EXTRAS = [
 
 const Vermicelli = () => {
     return (
-        <div id="vermicelli">
+        <div>
             <div className="menu-title-section">
                 <div className="columns is-desktop is-menu-title">
                     <div className="column">Vermicelli (Bún)</div>
