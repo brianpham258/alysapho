@@ -81,7 +81,7 @@ const BOBA = [
         price: '4.50'
     },
     {
-        title: '617. Straberry Bubble Tea (Trà Sữa Trân Châu Dâu)',
+        title: '617. Cinnamon Apple Bubble Tea (Trà Sữa Trân Châu Táo)',
         price: '4.50'
     },
     {

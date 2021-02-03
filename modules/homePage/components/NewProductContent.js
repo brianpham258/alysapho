@@ -119,10 +119,10 @@ const CONTENTS = [
         },
         img: {
             src: '/strawberry-tea.png',
-            alt: 'strawberry tea'
+            alt: 'apple tea'
         },
-        title: 'Strawberry Bubble Tea',
-        description: 'Strawberry tea with jelly and boba.'
+        title: 'Cinnamon Apple Bubble Tea',
+        description: 'Cinnamon Apple tea with jelly and boba.'
     },
     {
         className: 'left',
