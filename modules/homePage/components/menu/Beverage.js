@@ -73,7 +73,7 @@ const BEVERAGES = [
 
 const BOBA = [
     {
-        title: '615. Tora Bubble Tea (Trà Sữa Trân Châu Khoai Môn)',
+        title: '615. Taro Bubble Tea (Trà Sữa Trân Châu Khoai Môn)',
         price: '4.50'
     },
     {
