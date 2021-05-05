@@ -19,15 +19,6 @@ const PRICES = [
         title: 'Large Size',
         price: '15.49',
         className: 'column is-one-quarter'
-    },
-    {
-        title: 'Kids Size',
-        price: '8.95',
-        className: 'column',
-        extra: {
-            title: 'Bean Sprout and Basil',
-            price: '2.00'
-        }
     }
 ];
 
