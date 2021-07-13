@@ -41,7 +41,7 @@ const VEGETARIANS = [
     },
     {
         title: '307. Spicy Vegetarian Noodle Soup w/Tofu Puffs',
-        price: '13.95'
+        price: '14.7'
     },
     {
         title: '308. Spicy Vegetarian Rice with BBQ Soya',
