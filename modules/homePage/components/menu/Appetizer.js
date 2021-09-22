@@ -1,5 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
+
+import { useCoreServices } from '../../../core';
 
 const StyledTitleMenu = styled.div`
     display: flex;
@@ -12,52 +15,9 @@ const StyledWrapper = styled.div`
     margin-bottom: 20px;
 `;
 
-const ROLLS = [
-    {
-        title: '201. Pork & Shrimp (Gỏi Cuốn)'
-    },
-    {
-        title: '202. Grilled Pork Sausage (Nem Cuốn)'
-    },
-    {
-        title: '203. Fish Sausage (Cá Cuốn)'
-    },
-    {
-        title: '204. Grilled Lemongrass Beef (Bò Cuốn)'
-    },
-    {
-        title: '205. Grilled Lemongrass Pork (Heo Cuốn)'
-    },
-    {
-        title: '206. Grilled Lemongrass Chicken (Gà Cuốn)'
-    },
-    {
-        title: '207. Deep Fried Spring Roll (Chả Giò)'
-    }
-];
+const Appetizer = ({ saladRollData, slicedSaladData, beefJerkyData }) => {
+    const { formatAmount } = useCoreServices();
 
-const SALADS = [
-    {
-        title: '208. Pork & Shrimp'
-    },
-    {
-        title: '209. Grilled Lemongrass Pork'
-    },
-    {
-        title: '210. Grilled Lemongrass Chicken'
-    },
-    {
-        title: '211. Grilled Lemongrass Beef'
-    }
-];
-
-const BEEF = [
-    {
-        title: '212. Beef Jerky'
-    }
-];
-
-const Appetizer = () => {
     return (
         <div>
             <div className="menu-title-section">
@@ -65,13 +25,13 @@ const Appetizer = () => {
             </div>
 
             <StyledTitleMenu className="columns is-desktop has-margin-bottom">
-                <div className="column is-description">Two Salad Rolls Served with Fish or Coconut Sauce</div>
-                <div className="column is-1 is-description">$6.95</div>
+                <div className="column is-description">{saladRollData?.[0]?.name}</div>
+                <div className="column is-1 is-description">${formatAmount(saladRollData?.[0]?.price)}</div>
             </StyledTitleMenu>
 
             <StyledWrapper>
-                {ROLLS.map(item => (
-                    <div className="has-margin-bottom">{item.title}</div>
+                {saladRollData.slice(1).map(item => (
+                    <div className="has-margin-bottom">{item.name}</div>
                 ))}
             </StyledWrapper>
 
@@ -80,13 +40,13 @@ const Appetizer = () => {
             </div>
 
             <StyledTitleMenu className="columns is-desktop has-margin-bottom">
-                <div className="column is-description">Fresh Fine Sliced Cabbage Salad</div>
-                <div className="column is-1 is-description">$9.95</div>
+                <div className="column is-description">{slicedSaladData?.[0]?.name}</div>
+                <div className="column is-1 is-description">${formatAmount(slicedSaladData?.[0]?.price)}</div>
             </StyledTitleMenu>
 
             <StyledWrapper>
-                {SALADS.map(item => (
-                    <div className="has-margin-bottom">{item.title}</div>
+                {slicedSaladData.slice(1).map(item => (
+                    <div className="has-margin-bottom">{item.name}</div>
                 ))}
             </StyledWrapper>
 
@@ -95,17 +55,28 @@ const Appetizer = () => {
             </div>
 
             <StyledTitleMenu className="columns is-desktop has-margin-bottom">
-                <div className="column is-description">Beef Jerky</div>
-                <div className="column is-1 is-description">$7.00</div>
+                <div className="column is-description">{beefJerkyData?.[0]?.name}</div>
+                <div className="column is-1 is-description">${formatAmount(beefJerkyData?.[0]?.price)}</div>
             </StyledTitleMenu>
 
             <StyledWrapper>
-                {BEEF.map(item => (
-                    <div className="has-margin-bottom">{item.title}</div>
+                {beefJerkyData.slice(1).map(item => (
+                    <div className="has-margin-bottom">{item.name}</div>
                 ))}
             </StyledWrapper>
         </div>
     );
+};
+
+Appetizer.propTypes = {
+    saladRollData: PropTypes.array,
+    slicedSaladData: PropTypes.array,
+    beefJerkyData: PropTypes.array
+};
+Appetizer.defaultProps = {
+    saladRollData: [],
+    slicedSaladData: [],
+    beefJerkyData: []
 };
 
 export default Appetizer;

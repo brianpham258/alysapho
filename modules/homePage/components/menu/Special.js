@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 import { Extra } from '../../../core';
 
@@ -14,45 +15,7 @@ const StyledWrapper = styled.div`
     margin-bottom: 20px;
 `;
 
-const NOODLES = [
-    {
-        title: '501. Spicy, Lemongrass Beef and Pork Noodle in Soup (Bún Bò Huế)',
-        price: '14.95'
-    },
-    {
-        title: '502. Chicken, Noodle in Soup (Phở Gà)',
-        price: '14.95'
-    },
-    {
-        title: '503. Seafood Noodle in Soup',
-        price: '14.95'
-    }
-];
-
-const EXTRAS = [
-    {
-        title: 'Bean Sprouts and Basil',
-        price: '2.00'
-    },
-    {
-        title: 'Broccoli, Carrot, Rutabaga and Cabbage',
-        price: '3.00'
-    },
-    {
-        title: 'Meats',
-        price: '3.00'
-    },
-    {
-        title: 'Spicy Broth',
-        price: '0.75'
-    },
-    {
-        title: 'Extra Broth 32oz ',
-        price: '4.49'
-    }
-];
-
-const Noodle = () => {
+const Special = ({ specialNoodleData, noodleExtraData }) => {
     return (
         <div>
             <div className="menu-title-section">
@@ -60,20 +23,30 @@ const Noodle = () => {
             </div>
 
             <StyledWrapper>
-                {NOODLES.map(item => (
+                {specialNoodleData.map(item => (
                     <StyledTitleMenu className="has-margin-bottom">
-                        <div>{item.title}</div>
+                        <div>{item.name}</div>
                         <div>${item.price}</div>
                     </StyledTitleMenu>
                 ))}
 
                 <div className="has-margin-bottom has-text-right">
                     <div>Add-On</div>
-                    <Extra extras={EXTRAS} />
+                    <Extra extras={noodleExtraData} />
                 </div>
             </StyledWrapper>
         </div>
     );
 };
 
-export default Noodle;
+Special.propTypes = {
+    specialNoodleData: PropTypes.array,
+    noodleExtraData: PropTypes.array
+};
+
+Special.defaultProps = {
+    specialNoodleData: [],
+    noodleExtraData: []
+};
+
+export default Special;

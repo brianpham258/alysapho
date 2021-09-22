@@ -1,13 +1,15 @@
 import React from 'react';
 
-import Baguette from './menu/Baguette';
-import Noodle from './menu/Noodle';
-import Special from './menu/Special';
-import Appetizer from './menu/Appetizer';
-import Vermicelli from './menu/Vermicelli';
-import Rice from './menu/Rice';
-import Vegetarian from './menu/Vegetarian';
-import Beverages from './menu/Beverage';
+import {
+    BaguetteContainer,
+    NoodleContainer,
+    SpecialContainer,
+    AppetizerContainer,
+    VermicelliContainer,
+    RiceContainer,
+    VegetarianContainer,
+    BeverageContainer
+} from '../containers';
 
 const MenuContent = () => {
     return (
@@ -15,35 +17,50 @@ const MenuContent = () => {
             <div className="is-page-title" id="baguette">
                 OUR MENU
             </div>
-            <Baguette />
+
+            <BaguetteContainer />
+
             <div className="divider" id="noodle">
                 <hr />
             </div>
-            <Noodle />
+
+            <NoodleContainer />
+
             <div className="divider" id="special">
                 <hr />
             </div>
-            <Special />
+
+            <SpecialContainer />
+
             <div className="divider" id="appetizer">
                 <hr />
             </div>
-            <Appetizer />
+
+            <AppetizerContainer />
+
             <div className="divider" id="vermicelli">
                 <hr />
             </div>
-            <Vermicelli />
+
+            <VermicelliContainer />
+
             <div className="divider" id="rice">
                 <hr />
             </div>
-            <Rice />
+
+            <RiceContainer />
+
             <div className="divider" id="vegetarian">
                 <hr />
             </div>
-            <Vegetarian />
+
+            <VegetarianContainer />
+
             <div className="divider" id="beverage">
                 <hr />
             </div>
-            <Beverages />
+
+            <BeverageContainer />
         </div>
     );
 };

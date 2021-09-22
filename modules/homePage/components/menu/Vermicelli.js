@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
-import { Extra } from '../../../core';
+import { Extra, useCoreServices } from '../../../core';
 
 const StyledWrapper = styled.div`
     font-size: 20px;
@@ -9,43 +10,14 @@ const StyledWrapper = styled.div`
     margin-bottom: 20px;
 `;
 
-const VERMICELLIES = [
-    {
-        title: '701. Grilled Lemongrass Pork and Spring Roll (Bún Heo Nướng, Chả Giò)'
-    },
-    {
-        title: '702. Grilled Lemongrass Chicken and Spring Roll (Bún Gà Nướng, Chả Giò)'
-    },
-    {
-        title: '703. Grilled Lemongrass Beef and Spring Roll (Bún Bò Nướng, Chả Giò)'
-    },
-    {
-        title: '704. Grilled Pork Sausage and Spring Roll (Bún Nem Nướng, Chả Giò)'
-    }
-];
-
-const EXTRAS = [
-    {
-        title: 'Meat or Sausage',
-        price: '3.00'
-    },
-    {
-        title: 'Vegetable',
-        price: '3.00'
-    },
-    {
-        title: 'Spring Roll',
-        price: '3.50'
-    }
-];
-
-const Vermicelli = () => {
+const Vermicelli = ({ vermicelliData, vermicelliExtraData }) => {
+    const { formatAmount } = useCoreServices();
     return (
         <div>
             <div className="menu-title-section">
                 <div className="columns is-desktop is-menu-title">
                     <div className="column">Vermicelli (Bún)</div>
-                    <div className="column is-2">$13.95</div>
+                    <div className="column is-2">${formatAmount(vermicelliData?.[0]?.price)}</div>
                 </div>
                 <div className="is-description">
                     Served with lettuce, bean sprouts, cucumbers, green onion oil and fish sauce
@@ -53,17 +25,27 @@ const Vermicelli = () => {
             </div>
 
             <StyledWrapper>
-                {VERMICELLIES.map(item => (
-                    <div className="has-margin-bottom">{item.title}</div>
+                {vermicelliData.slice(1).map(item => (
+                    <div className="has-margin-bottom">{item.name}</div>
                 ))}
 
                 <div className="has-margin-bottom has-text-right">
                     <div>Extra</div>
-                    <Extra extras={EXTRAS} />
+                    <Extra extras={vermicelliExtraData} />
                 </div>
             </StyledWrapper>
         </div>
     );
+};
+
+Vermicelli.propTypes = {
+    vermicelliData: PropTypes.array,
+    vermicelliExtraData: PropTypes.array
+};
+
+Vermicelli.defaultProps = {
+    vermicelliData: [],
+    vermicelliExtraData: []
 };
 
 export default Vermicelli;

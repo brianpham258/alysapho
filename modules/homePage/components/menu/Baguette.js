@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
-import { Extra } from '../../../core';
+import { Extra, useCoreServices } from '../../../core';
 
 const StyledWrapper = styled.div`
     font-size: 20px;
@@ -9,64 +10,15 @@ const StyledWrapper = styled.div`
     margin-bottom: 20px;
 `;
 
-const BAGUETTES = [
-    {
-        title: "101. Alysa's Classic (Pâté, Pork Sausage, Headcheese and jambon)"
-    },
-    {
-        title: '102. BBQ Pork (Xá Xíu)'
-    },
-    {
-        title: '103. Sausage (Nem Nướng)'
-    },
-    {
-        title: '104. Grilled Chicken (Gà Nướng)'
-    },
-    {
-        title: '105. Grilled Pork (Heo Nướng)'
-    },
-    {
-        title: '106. Grilled Beef (Bò Nướng)'
-    },
-    {
-        title: '107. Shredded Chicken (Gà Chà Bông)'
-    },
-    {
-        title: '108. Curry Tofu Puffs (Cari Chay)'
-    },
-    {
-        title: '109. Soya Tofu Puffs (Xì Dầu Chay)'
-    },
-    {
-        title: '110. Five-Spice Pork (Ngũ Vị Hương)'
-    },
-    {
-        title: '111. BBQ Soya'
-    }
-];
+const Baguette = ({ baguetteData, baguetteExtraData }) => {
+    const { formatAmount } = useCoreServices();
 
-const EXTRAS = [
-    {
-        title: 'Daikon and carrots',
-        price: '0.75'
-    },
-    {
-        title: 'Meat',
-        price: '2.00'
-    },
-    {
-        title: 'Tofu Puff',
-        price: '2.00'
-    }
-];
-
-const Baguette = () => {
     return (
         <div>
             <div className="menu-title-section">
                 <div className="columns is-desktop is-menu-title">
                     <div className="column">Baguette (Bánh Mì)</div>
-                    <div className="column is-2">$7.49</div>
+                    <div className="column is-2">${formatAmount(baguetteData?.[0]?.price)}</div>
                 </div>
                 <p className="is-description">
                     Crunchy Baguette, Meat or Tofu Puffs, Mayonnaise, Pickled Daikon, Carrots and Cilantro.
@@ -74,17 +26,27 @@ const Baguette = () => {
             </div>
 
             <StyledWrapper>
-                {BAGUETTES.map(item => (
-                    <div className="has-margin-bottom">{item.title}</div>
+                {baguetteData.slice(1).map(item => (
+                    <div className="has-margin-bottom">{item.name}</div>
                 ))}
 
                 <div className="has-text-right">
                     <div>Extra</div>
-                    <Extra extras={EXTRAS} />
+                    <Extra extras={baguetteExtraData} />
                 </div>
             </StyledWrapper>
         </div>
     );
+};
+
+Baguette.propTypes = {
+    baguetteData: PropTypes.array,
+    baguetteExtraData: PropTypes.array
+};
+
+Baguette.defaultProps = {
+    baguetteData: [],
+    baguetteExtraData: []
 };
 
 export default Baguette;

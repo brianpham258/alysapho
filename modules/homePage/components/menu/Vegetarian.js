@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
-import { Extra } from '../../../core';
+import { Extra, useCoreServices } from '../../../core';
 
 const StyledTitleMenu = styled.div`
     display: flex;
@@ -14,57 +15,9 @@ const StyledWrapper = styled.div`
     margin-bottom: 20px;
 `;
 
-const VEGETARIANS = [
-    {
-        title: '301. Vegetarian Spring Roll (2 Rolls)',
-        price: '6.95'
-    },
-    {
-        title: '302. Vegetarian Salad Roll w/Tofu Puffs (2 Rolls)',
-        price: '6.95'
-    },
-    {
-        title: '303. Vegetarian Noodle w/Tofu Puffs (Soya Sauce)',
-        price: '13.95'
-    },
-    {
-        title: '304. Vegetarian Noodle w/Tofu Puffs (In Soup)',
-        price: '13.95'
-    },
-    {
-        title: '305. Vegetarian Vermicelli w/Tofu Puffs & Spring Roll',
-        price: '13.95'
-    },
-    {
-        title: '306. Vegetarian Rice w/Tofu Puffs & Mix Vegetables',
-        price: '13.95'
-    },
-    {
-        title: '307. Spicy Vegetarian Noodle Soup w/Tofu Puffs',
-        price: '14.70'
-    },
-    {
-        title: '308. Spicy Vegetarian Rice with BBQ Soya',
-        price: '13.95'
-    }
-];
+const Vegetarian = ({ vegetarianData, vegetarianExtraData }) => {
+    const { formatAmount } = useCoreServices();
 
-const EXTRAS = [
-    {
-        title: 'Tofu Puffs',
-        price: '2.00'
-    },
-    {
-        title: 'Spring Roll',
-        price: '3.50'
-    },
-    {
-        title: 'Vegetables',
-        price: '3.00'
-    }
-];
-
-const Vegetarian = () => {
     return (
         <div>
             <div className="menu-title-section">
@@ -72,20 +25,30 @@ const Vegetarian = () => {
             </div>
 
             <StyledWrapper>
-                {VEGETARIANS.map(item => (
+                {vegetarianData.map(item => (
                     <StyledTitleMenu className="has-margin-bottom">
-                        <div>{item.title}</div>
-                        <div>${item.price}</div>
+                        <div>{item.name}</div>
+                        <div>${formatAmount(item.price)}</div>
                     </StyledTitleMenu>
                 ))}
 
                 <div className="has-margin-bottom has-text-right">
                     <div>Add-On</div>
-                    <Extra extras={EXTRAS} />
+                    <Extra extras={vegetarianExtraData} />
                 </div>
             </StyledWrapper>
         </div>
     );
+};
+
+Vegetarian.propTypes = {
+    vegetarianData: PropTypes.array,
+    vegetarianExtraData: PropTypes.array
+};
+
+Vegetarian.defaultProps = {
+    vegetarianData: [],
+    vegetarianExtraData: []
 };
 
 export default Vegetarian;
