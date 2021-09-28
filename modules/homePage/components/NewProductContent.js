@@ -85,14 +85,23 @@ const StyledButtonWrapper = styled.div`
     margin-top: 30px;
 `;
 
+const HEADER_ANIM = {
+    y: 0,
+    opacity: 1,
+    playScale: 0.3
+};
+
+const CONTENT_ANIM = {
+    x: 0,
+    opacity: 1,
+    playScale: 0.3
+};
+
 const CONTENTS = [
     {
         className: 'left',
         parallax: {
-            animation: {
-                x: 0,
-                opacity: 1
-            },
+            animation: CONTENT_ANIM,
             style: {
                 transform: 'translateX(100px)',
                 opacity: 0
@@ -108,10 +117,7 @@ const CONTENTS = [
     {
         className: 'right',
         parallax: {
-            animation: {
-                x: 0,
-                opacity: 1
-            },
+            animation: CONTENT_ANIM,
             style: {
                 transform: 'translateX(-100px)',
                 opacity: 0
@@ -127,10 +133,7 @@ const CONTENTS = [
     {
         className: 'left',
         parallax: {
-            animation: {
-                x: 0,
-                opacity: 1
-            },
+            animation: CONTENT_ANIM,
             style: {
                 transform: 'translateX(100px)',
                 opacity: 0
@@ -147,19 +150,31 @@ const CONTENTS = [
 
 const NewProductContent = () => {
     return (
-        <Parallax animation={{ y: 0, opacity: 1 }} style={{ transform: 'translateY(100px)', opacity: 0 }}>
+        <Parallax
+            animation={HEADER_ANIM}
+            style={{ transform: 'translateY(100px)', opacity: 0 }}
+        >
             <StyledWrapper>
-                <Parallax animation={{ y: 0, opacity: 1 }} style={{ transform: 'translateY(100px)', opacity: 0 }}>
+                <Parallax
+                    animation={HEADER_ANIM}
+                    style={{ transform: 'translateY(100px)', opacity: 0 }}
+                >
                     <StyledTitle id="new_product">New product</StyledTitle>
                 </Parallax>
 
-                <Parallax animation={{ y: 0, opacity: 1 }} style={{ transform: 'translateY(100px)', opacity: 0 }}>
+                <Parallax
+                    animation={HEADER_ANIM}
+                    style={{ transform: 'translateY(100px)', opacity: 0 }}
+                >
                     <StyledImgWrapper>
                         <StyledImg src="/bubble-tea.png" alt="bubble tea" />
                     </StyledImgWrapper>
                 </Parallax>
 
-                <Parallax animation={{ y: 0, opacity: 1 }} style={{ transform: 'translateY(100px)', opacity: 0 }}>
+                <Parallax
+                    animation={HEADER_ANIM}
+                    style={{ transform: 'translateY(100px)', opacity: 0 }}
+                >
                     <StyledTitle>Bubble Tea</StyledTitle>
                     <StyledTitle>Only $4.50</StyledTitle>
                 </Parallax>
