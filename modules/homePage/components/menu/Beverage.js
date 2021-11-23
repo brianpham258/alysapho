@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import { useCoreServices } from '../../../core';
+import { Extra, useCoreServices } from '../../../core';
 
 const StyledTitleMenu = styled.div`
     display: flex;
@@ -15,7 +15,7 @@ const StyledWrapper = styled.div`
     margin-bottom: 20px;
 `;
 
-const Beverage = ({ beverageData, bobaData }) => {
+const Beverage = ({ beverageData, bobaData, bobaExtras }) => {
     const { formatAmount } = useCoreServices();
 
     return (
@@ -44,6 +44,11 @@ const Beverage = ({ beverageData, bobaData }) => {
                         </StyledTitleMenu>
                     ))}
                 </div>
+
+                <div className="has-margin-bottom has-text-right">
+                    <div>Add-On</div>
+                    <Extra extras={bobaExtras} />
+                </div>
             </StyledWrapper>
         </div>
     );
@@ -51,12 +56,14 @@ const Beverage = ({ beverageData, bobaData }) => {
 
 Beverage.propTypes = {
     beverageData: PropTypes.array,
-    bobaData: PropTypes.array
+    bobaData: PropTypes.array,
+    bobaExtras: PropTypes.array
 };
 
 Beverage.defaultProps = {
     beverageData: [],
-    bobaData: []
+    bobaData: [],
+    bobaExtras: []
 };
 
 export default Beverage;
