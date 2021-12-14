@@ -15,11 +15,6 @@ const OrderContent = () => {
                     </a>
                 </div>
                 <div className="column">
-                    <a href="https://fantuan.ca/delivery/en/" target="_blank" rel="noreferrer">
-                        <img src="/fantuan.png" alt="Uber Eats" style={{ width: '30%' }} />
-                    </a>
-                </div>
-                <div className="column">
                     <a href="https://alysapho.moduurn.com/home" target="_blank" rel="noreferrer">
                         <img src="/moduurn.png" alt="Moduurn" style={{ width: '30%' }} />
                     </a>
