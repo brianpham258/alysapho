@@ -4,9 +4,9 @@ import { InfoCircleFilled } from '@ant-design/icons';
 
 const StyledContent = styled.div`
     text-align: center;
-    font-size: 20px;
-    max-width: 500px;
+    font-size: 24px;
     margin: auto;
+    font-weight: bold;
 `;
 
 const NotiContent = () => {
@@ -17,20 +17,10 @@ const NotiContent = () => {
             <div className="is-page-title">WE ACCEPT CASH AND DEBIT</div>
             <hr />
             <div className="is-page-title" style={{ color: '#1c94fe' }}>
-                <InfoCircleFilled /> PRICE CHANGE NOTICE <InfoCircleFilled />
+                <InfoCircleFilled /> HOLIDAY HOURS NOTICE <InfoCircleFilled />
             </div>
             <StyledContent>
-                <div>
-                    Please note that effective the 23th of November 2021 there will be a price change on our menu due to
-                    the increased costs from our suppliers.
-                </div>
-                <div className="mt-16">
-                    We did everything we could to avoid raising the price, but the situation has continued.
-                </div>
-                <div className="mt-16">
-                    We greatly appreciate you business and hope you will understand our need to implement this increase.
-                </div>
-                <div className="mt-16">Many thanks.</div>
+                <div>We are closed from 25 Dec 2021 to 3 January 2022 and reopen 4 January 2022</div>
             </StyledContent>
         </div>
     );
