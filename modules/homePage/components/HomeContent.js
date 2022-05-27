@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import NavbarContent from './NavbarContent';
-import NotiContent from './NotiContent';
+import NotiContentContainer from '../containers/NotiContentContainer';
 import MenuContent from './MenuContent';
 import OrderContent from './OrderContent';
 import ContactContent from './ContactContent';
@@ -13,6 +13,7 @@ const StyledImage = styled.div`
     width: 100%;
     background-size: cover;
     background: url('/home-page-image.jpg');
+    background-repeat: none;
 `;
 
 const StyledLogo = styled.div`
@@ -39,7 +40,7 @@ const HomeContent = () => {
             <NavbarContent />
 
             <div className="mt-32">
-                <NotiContent />
+                <NotiContentContainer />
                 <div className="container">
                     <hr />
                     <NewProductContent />
