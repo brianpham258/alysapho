@@ -6,3 +6,5 @@ export { default as VermicelliContainer } from './VermicelliContainer';
 export { default as RiceContainer } from './RiceContainer';
 export { default as VegetarianContainer } from './VegetarianContainer';
 export { default as BeverageContainer } from './BeverageContainer';
+export { default as NotiContentContainer } from './NotiContentContainer';
+export { default as ExtraNotiContainer } from './ExtraNotiContainer';

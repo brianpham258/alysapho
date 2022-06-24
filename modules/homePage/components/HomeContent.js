@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { NotiContentContainer, ExtraNotiContainer } from '../containers';
 import NavbarContent from './NavbarContent';
-import NotiContentContainer from '../containers/NotiContentContainer';
 import MenuContent from './MenuContent';
 import OrderContent from './OrderContent';
 import ContactContent from './ContactContent';
@@ -56,6 +56,12 @@ const HomeContent = () => {
                     </div>
 
                     <MenuContent />
+
+                    <div id="extra-noti" className="divider">
+                        <hr />
+                    </div>
+
+                    <ExtraNotiContainer />
 
                     <div className="divider">
                         <hr />
