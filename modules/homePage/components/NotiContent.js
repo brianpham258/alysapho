@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const NotiContent = ({ notiData }) => {
     return (
@@ -10,6 +11,14 @@ const NotiContent = ({ notiData }) => {
             ))}
         </div>
     );
+};
+
+NotiContent.propTypes = {
+    notiData: PropTypes.array
+};
+
+NotiContent.defaultProps = {
+    notiData: []
 };
 
 export default NotiContent;
